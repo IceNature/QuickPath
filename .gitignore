@@ -1,0 +1,8 @@
+*.suo
+*.pdb
+*.vshost.exe
+*.vshost.exe.manifest
+
+/src/QuickPath/obj
+/src/QuickPath/bin
+/bin

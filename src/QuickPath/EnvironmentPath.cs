@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QuickPath
 {
@@ -26,6 +27,17 @@ namespace QuickPath
             }
             ChangedPATH.Remove(ChangedPATH.Length - 1, 1);
             Environment.SetEnvironmentVariable("PATH", ChangedPATH.ToString(), EnvironmentVariableTarget.Machine);
+        }
+    }
+    static class CommonMethods
+    {
+        static public List<string> DeleteInexistentDir(string[] directorys)
+        {
+            List<string> result = new List<string>();
+            foreach (string dir in directorys)
+                if (Directory.Exists(dir))
+                    result.Add(dir);
+            return result;
         }
     }
 }

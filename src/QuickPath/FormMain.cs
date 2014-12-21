@@ -52,7 +52,7 @@ namespace QuickPath
             FormAdd AddItem = new FormAdd();
             AddItem.ShowDialog();
             if (AddItem.AddItems.Count != 0)
-                listBox1.Items.AddRange(AddItem.AddItems.ToArray());
+                addToListBox(AddItem.AddItems.ToArray());
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -86,9 +86,9 @@ namespace QuickPath
             }
         }
 
-        private void addToListBox(string[] Files)
+        private void addToListBox(string[] directorys)
         {
-            listBox1.Items.AddRange(Files);
+            listBox1.Items.AddRange(CommonMethods.DeleteInexistentDir(directorys).ToArray());
         }
     }
 }

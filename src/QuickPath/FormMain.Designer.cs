@@ -32,6 +32,7 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.labelTip = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -42,10 +43,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Location = new System.Drawing.Point(12, 36);
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox1.Size = new System.Drawing.Size(503, 388);
+            this.listBox1.Size = new System.Drawing.Size(503, 364);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.widgets_DragDrop);
@@ -85,12 +86,22 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // labelTip
+            // 
+            this.labelTip.AutoSize = true;
+            this.labelTip.Location = new System.Drawing.Point(13, 13);
+            this.labelTip.Name = "labelTip";
+            this.labelTip.Size = new System.Drawing.Size(221, 12);
+            this.labelTip.TabIndex = 4;
+            this.labelTip.Text = "点击下方“添加”按钮或直接将路径拖入";
+            // 
             // FormMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 439);
+            this.Controls.Add(this.labelTip);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
@@ -102,6 +113,7 @@
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.widgets_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.widgets_DragEnter);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -111,6 +123,7 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Label labelTip;
     }
 }
 

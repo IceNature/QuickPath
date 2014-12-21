@@ -45,9 +45,9 @@ namespace QuickPath
                 textBox1.Text += ";";
             }
         }
-        private void addToTextBox(string[] Files)
+        private void addToTextBox(string[] directorys)
         {
-            List<string> FilePaths = new List<string>(Files);
+            List<string> FilePaths = new List<string>(directorys);
             StringBuilder DragPathText = new StringBuilder();
             FilePaths.ForEach(m => DragPathText.Append(m).Append(";"));
             textBox1.Text += DragPathText.ToString();

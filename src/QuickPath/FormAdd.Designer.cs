@@ -32,6 +32,7 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonBrowse = new System.Windows.Forms.Button();
+            this.labelTip = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -40,11 +41,11 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(12, 29);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(544, 254);
+            this.textBox1.Size = new System.Drawing.Size(544, 237);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textBox1_DragDrop);
@@ -84,11 +85,21 @@
             this.buttonBrowse.UseVisualStyleBackColor = true;
             this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
             // 
+            // labelTip
+            // 
+            this.labelTip.AutoSize = true;
+            this.labelTip.Location = new System.Drawing.Point(10, 9);
+            this.labelTip.Name = "labelTip";
+            this.labelTip.Size = new System.Drawing.Size(221, 12);
+            this.labelTip.TabIndex = 4;
+            this.labelTip.Text = "点击下方“浏览”按钮或直接将路径拖入";
+            // 
             // FormAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 307);
+            this.Controls.Add(this.labelTip);
             this.Controls.Add(this.buttonBrowse);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
@@ -107,5 +118,6 @@
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonBrowse;
+        private System.Windows.Forms.Label labelTip;
     }
 }

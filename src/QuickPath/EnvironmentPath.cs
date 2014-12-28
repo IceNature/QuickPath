@@ -12,21 +12,40 @@ namespace QuickPath
         public List<string> Paths { get; private set; }
         public EnvironmentPath()
         {
-            Paths = new List<string>();
-            string EnvironmentPaths = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Machine);
-            Paths.AddRange(EnvironmentPaths.Split(new char[] {';'}));
+            try
+            {
+                Paths = new List<string>();
+                string EnvironmentPaths = Environment.GetEnvironmentVariable("PATH", EnvironmentVariableTarget.Machine);
+                Paths.AddRange(EnvironmentPaths.Split(new char[] { ';' }));
+            }
+            catch(Exception e)
+            {
+                onException(e.Message + "\n无法读取环境变量PATH！");
+            }
         }
 
         public void ApplyChange()
         {
-            StringBuilder ChangedPATH = new StringBuilder();
-            foreach (string m in Paths)
+            try
             {
-                ChangedPATH.Append(m);
-                ChangedPATH.Append(";");
+                StringBuilder ChangedPATH = new StringBuilder();
+                foreach (string m in Paths)
+                {
+                    ChangedPATH.Append(m);
+                    ChangedPATH.Append(";");
+                }
+                ChangedPATH.Remove(ChangedPATH.Length - 1, 1);
+                Environment.SetEnvironmentVariable("PATH", ChangedPATH.ToString(), EnvironmentVariableTarget.Machine);
             }
-            ChangedPATH.Remove(ChangedPATH.Length - 1, 1);
-            Environment.SetEnvironmentVariable("PATH", ChangedPATH.ToString(), EnvironmentVariableTarget.Machine);
+            catch(Exception e)
+            {
+                onException(e.Message + "\n无法写入环境变量PATH！");
+            }
+        }
+        private void onException(string message)
+        {
+            MessageBox.Show(message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Application.Exit();
         }
     }
     static class CommonMethods

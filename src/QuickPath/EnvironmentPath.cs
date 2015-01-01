@@ -20,7 +20,7 @@ namespace QuickPath
             }
             catch(Exception e)
             {
-                onException(e.Message + "\n无法读取环境变量PATH！");
+                onException(e.Message + Properties.Resources.MessageBoxErrorReadPATH);
             }
         }
 
@@ -39,12 +39,12 @@ namespace QuickPath
             }
             catch(Exception e)
             {
-                onException(e.Message + "\n无法写入环境变量PATH！");
+                onException(e.Message + Properties.Resources.MessageBoxErrorWritePATH);
             }
         }
         private void onException(string message)
         {
-            MessageBox.Show(message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(message, Properties.Resources.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             Application.Exit();
         }
     }
@@ -57,6 +57,6 @@ namespace QuickPath
                 if (Directory.Exists(dir))
                     result.Add(dir);
             return result;
-        }
+        }    
     }
 }

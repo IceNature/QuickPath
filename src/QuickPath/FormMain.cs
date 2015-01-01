@@ -63,7 +63,7 @@ namespace QuickPath
                 ep.Paths.Add(m.ToString());
             }
             ep.ApplyChange();
-            MessageBox.Show("完成！", "保存环境变量", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Properties.Resources.MessgaeBoxComplete, Properties.Resources.MessageBoxTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void widgets_DragEnter(object sender, DragEventArgs e)

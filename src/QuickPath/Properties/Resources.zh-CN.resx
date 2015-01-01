@@ -118,18 +118,18 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Error" xml:space="preserve">
-    <value>Error:</value>
+    <value>错误：</value>
   </data>
   <data name="MessageBoxErrorReadPATH" xml:space="preserve">
-    <value>\nCan not read PATH！</value>
+    <value>\n无法读取环境变量PATH！</value>
   </data>
   <data name="MessageBoxErrorWritePATH" xml:space="preserve">
-    <value>\nCan not Write PATH！</value>
+    <value>\n无法写入环境变量PATH！</value>
   </data>
   <data name="MessageBoxTitle" xml:space="preserve">
-    <value>Save environment variate PATH</value>
+    <value>保存环境变量</value>
   </data>
   <data name="MessgaeBoxComplete" xml:space="preserve">
-    <value>Complete!</value>
+    <value>完成！</value>
   </data>
 </root>

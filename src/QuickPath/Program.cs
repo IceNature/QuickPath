@@ -13,6 +13,12 @@ namespace QuickPath
         [STAThread]
         static void Main()
         {
+            string currentCulture = System.Globalization.CultureInfo.InstalledUICulture.Name;
+            if (currentCulture != "zh-CN") 
+                currentCulture = "en-US";
+            System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo(currentCulture);
+            System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());

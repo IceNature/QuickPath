@@ -6,4 +6,4 @@
 ##截图
 ![QuickPath](./pic/QuickPath.jpg)
 ##协议
-[GNU GPL V3](./LICENSE.md)
+[GNU GPL V3](./LICENSE)

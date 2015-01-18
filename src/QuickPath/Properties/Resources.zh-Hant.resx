@@ -117,23 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>确定(&amp;O)</value>
+  <data name="Error" xml:space="preserve">
+    <value>錯誤：</value>
   </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>取消(&amp;C)</value>
+  <data name="MessageBoxErrorReadPATH" xml:space="preserve">
+    <value>\n無法讀取環境變量PATH！</value>
   </data>
-  <data name="buttonBrowse.Text" xml:space="preserve">
-    <value>浏览(&amp;B)</value>
+  <data name="MessageBoxErrorWritePATH" xml:space="preserve">
+    <value>\n無法寫入環境變量PATH！</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelTip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 12</value>
+  <data name="MessageBoxTitle" xml:space="preserve">
+    <value>保存環境變量</value>
   </data>
-  <data name="labelTip.Text" xml:space="preserve">
-    <value>点击下方“浏览”按钮或直接将路径拖入</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>添加</value>
+  <data name="MessgaeBoxComplete" xml:space="preserve">
+    <value>完成！</value>
   </data>
 </root>

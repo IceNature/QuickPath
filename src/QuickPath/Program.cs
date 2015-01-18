@@ -14,8 +14,6 @@ namespace QuickPath
         static void Main()
         {
             string currentCulture = System.Globalization.CultureInfo.InstalledUICulture.Name;
-            if (currentCulture != "zh-CN") 
-                currentCulture = "en-US";
             System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo(currentCulture);
             System.Threading.Thread.CurrentThread.CurrentCulture = ci;
             System.Threading.Thread.CurrentThread.CurrentUICulture = ci;

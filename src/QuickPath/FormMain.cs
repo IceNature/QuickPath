@@ -20,7 +20,7 @@ namespace QuickPath
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            addToListBox(ep.Paths.ToArray());
+            fillListBox(ep.Paths.ToArray());
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace QuickPath
             FormAdd AddItem = new FormAdd();
             AddItem.ShowDialog();
             if (AddItem.AddItems.Count != 0)
-                addToListBox(AddItem.AddItems.ToArray());
+                fillListBox(AddItem.AddItems.ToArray());
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
@@ -82,13 +82,20 @@ namespace QuickPath
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                addToListBox((string[])e.Data.GetData(DataFormats.FileDrop));
+                fillListBox((string[])e.Data.GetData(DataFormats.FileDrop));
             }
         }
 
-        private void addToListBox(string[] directorys)
+        private void fillListBox(string[] directorys)
         {
             listBox1.Items.AddRange(CommonMethods.DeleteInexistentDir(directorys).ToArray());
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            ep = new EnvironmentPath();
+            listBox1.Items.Clear();
+            fillListBox(ep.Paths.ToArray());
         }
     }
 }

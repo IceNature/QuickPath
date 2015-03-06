@@ -133,7 +133,7 @@
   <data name="labelTip.Text" xml:space="preserve">
     <value>點擊下方“添加”按鈕或直接將路徑拖入</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>環境變量PATH</value>
+  <data name="buttonRefresh.Text" xml:space="preserve">
+    <value>刷新(&amp;R)</value>
   </data>
 </root>

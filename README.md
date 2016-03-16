@@ -1,4 +1,5 @@
-#QuickPath 
+#QuickPath
+[![Build Status](https://travis-ci.org/IceNature/QuickPath.svg?branch=master)](https://travis-ci.org/IceNature/QuickPath)  
 以更简单的方式快速修改Win环境变量
 
 ##运行环境
